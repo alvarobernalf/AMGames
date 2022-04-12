@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial;
+    background-image: url("../img/AMGames_background.png");
+}
+
+
+/* CABECERA */
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 7%;
+    background-color: #ffa500;
+    border-bottom: solid 1px #808080;
+}
+
+header img {
+    float: left;
+}
+
+
+/* CONTENIDO */
+#juego {
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+    width: 70vw;
+    height: 80vh;
+    border: solid 1px #808080;
+    background-color: #ffffff;
+}
+
+#imgFondo {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    width: 400px;
+    height: auto;
+    animation: oscilar linear 2s infinite;
+}
+
+#juego h1 {
+    color: #004b88;
+    text-shadow: 1px 1px 1px #ffa600;
+    z-index: 1;
+}
+
+#titulo {
+    position: absolute;
+    top: 20%;
+    left: 53%;
+    margin: 0;
+    font-size: 3.5em;
+}
+
+@keyframes oscilar {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.botonPlay {
+    position: absolute;
+    top: 45%;
+    width: 150px;
+    height: auto;
+}
+
+.botonPlay:hover {
+    cursor: pointer;
+}
+
+#botonVSMaquina {
+    left: 55%;
+    animation: ampliar 10s linear infinite;
+}
+
+#botonVSPlayer {
+    left: 80%;
+    animation: ampliar 10s linear 1s infinite;
+}
+
+@keyframes ampliar {
+    48% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    52% {
+        transform: scale(1);
+    }
+}
+
+.desaparecer {
+    transform: scale(1.1);
+}
+
+/* TABLERO TRES EN RAYA */
+#turno {
+    visibility: hidden;
+    text-align: center;
+}
+
+table {
+    visibility: hidden;
+    table-layout: fixed;
+    width: 50%;
+    height: 75%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+table td {
+    text-align: center;
+    font-size: 5em;
+    background-color: #add8e636;
+}
+
+#casilla1 {
+    border-right: solid 5px #00BFFF;
+    border-bottom: solid 5px #00BFFF;
+}
+
+#casilla3 {
+    border-bottom: solid 5px #00BFFF;
+    border-left: solid 5px #00BFFF;
+}
+
+#casilla5 {
+    border: solid 5px #00BFFF;
+}
+
+#casilla7 {
+    border-top: solid 5px #00BFFF;
+    border-right: solid 5px #00BFFF;
+}
+
+#casilla9 {
+    border-top: solid 5px #00BFFF;
+    border-left: solid 5px #00BFFF;
+}
+
+
+/* ASIDE DE JUEGOS SUGERIDOS */
+#sugeridos {
+    position: absolute;
+    top: 10vh;
+    right: 2vw;
+    width: 20vw;
+    height: 80vh;
+    background-color: #ffffff;
+    border: solid 1px #808080;
+}
+
+#sugeridos h1 {
+    text-align: center;
+}
